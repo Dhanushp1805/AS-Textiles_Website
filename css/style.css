@@ -10691,6 +10691,39 @@ div.single-cta:last-child {
     margin: auto;
 }
 
-.slick-track{
-    /* height: 600px; */
+.mv-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    height: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.mv-card:hover {
+    transform: translateY(-5px);
+}
+
+.mv-icon {
+    font-size: 40px;
+    color: #198754;
+    /* Bootstrap success color */
+    margin-bottom: 15px;
+}
+
+
+.info-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    height: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h4 {
+    margin-bottom: 15px;
+}
+
+.info-list li {
+    margin-bottom: 10px;
 }
