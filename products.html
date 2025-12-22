@@ -136,286 +136,460 @@
               <div class="col-lg-12">
                 <div class="my-masonry">
                   <div class="button-group filter-button-group">
-                    <button class="active" data-filter="*">All Products</button>
-                    <button data-filter=".Yarn">Yarn Products</button>
-                    <button data-filter=".Fabric">Fabric Products</button>
+                    <!-- <button class="active" data-filter="*">All Products</button> -->
+                    <button id="yarnBtn" class="active">Yarn Products</button>
+                    <button id="fabricBtn">Fabric Products</button>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="grid col3">
-              <!-- ================= YARN PRODUCTS ================= -->
+            <div id="yarnProducts" class="shop-container"></div>
+            <div id="fabricProducts" class="shop-container">
+              <!-- Sidebar -->
+              <aside class="sidebar">
+                <ul class="category-list">
+                  <li id="lightweightBtn" class="active">
+                    Lightweight Knits <span>›</span>
+                  </li>
+                  <li id="ribBtn">Rib & Trim Knits <span>›</span></li>
+                  <li id="terryBtn">Terry & Fleece Knits <span>›</span></li>
+                  <li id="texturedBtn">
+                    Textured / Waffle Knits <span>›</span>
+                  </li>
+                  <li id="structuredBtn">
+                    Structured Double Knits <span>›</span>
+                  </li>
+                </ul>
 
-              <div class="grid-item Yarn">
-                <div class="box20 p-relative fix">
-                  <img
-                    src="img/product/Recycled-Yarn_1.png"
-                    alt="Recycled Yarn"
-                  />
-                  <div class="box-content">
-                    <h3 class="title"><a href="#">Recycled Yarn</a></h3>
-                  </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
+                <div class="sidebar-banner">
+                  <img src="baby-offer.jpg" alt="Offer" />
                 </div>
-              </div>
+              </aside>
 
-              <div class="grid-item Yarn">
-                <div class="box20 p-relative fix">
-                  <img src="img/product/OE-Yarn_1.png" alt="OE Yarn" />
-                  <div class="box-content">
-                    <h3 class="title"><a href="#">OE Yarn</a></h3>
-                  </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
+              <!-- Fabric Products 1-->
+              <main id="fabricOne" class="products">
+                <div class="section-title center-align">
+                  <h2>Lightweight Knits</h2>
+                  <span class="line5 mb-2">
+                    <img src="img/bg/circle_left.png" alt="circle_left"
+                  /></span>
+                  <p style="width: 100%">
+                    Lightweight knits offer a smooth surface, excellent
+                    breathability, and superior comfort. These fabrics are ideal
+                    for everyday wear, activewear, and layering garments.
+                  </p>
                 </div>
-              </div>
 
-              <div class="grid-item Yarn">
-                <div class="box20 p-relative fix">
-                  <img
-                    src="img/product/Knitting Grade Yarn_1.png"
-                    alt="Knitting Yarn"
-                  />
-                  <div class="box-content">
-                    <h3 class="title"><a href="#">Knitting Grade Yarn</a></h3>
+                <!-- Content Section -->
+                <div class="fabric-content">
+                  <div class="content-box">
+                    <h4>Key Characteristics</h4>
+                    <ul>
+                      <li>Soft hand feel</li>
+                      <li>Breathable & lightweight</li>
+                      <li>Ideal for printing and dyeing</li>
+                      <li>Optional Lycra stretch</li>
+                    </ul>
                   </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
 
-              <!-- ================= FABRIC PRODUCTS ================= -->
-              <div class="grid-item Fabric">
-                <div class="box20 p-relative fix">
-                  <img src="img/product/Pique_1.png" alt="Pique Fabric" />
-                  <div class="box-content">
-                    <h3 class="title"><a href="#">Pique Fabric</a></h3>
+                  <div class="content-box">
+                    <h4>Common Applications</h4>
+                    <ul class="app-list">
+                      <li>T-shirts</li>
+                      <li>Base layers</li>
+                      <li>Activewear</li>
+                      <li>Casual tops</li>
+                    </ul>
                   </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
                 </div>
-              </div>
 
-              <div class="grid-item Fabric">
-                <div class="box20 p-relative fix">
-                  <img
-                    src="img/product/Single_1.png"
-                    alt="Single Jersey Knitted Fabrics"
-                  />
-                  <div class="box-content">
-                    <h3 class="title">
-                      <a href="#">Single Jersey Knitted Fabrics</a>
-                    </h3>
+                <!-- Fabric Image Grid -->
+                <div class="product-grid">
+                  <div class="fabric-wrapper">
+                    <!-- CARD -->
+                    <div class="fabric-card">
+                      <div class="fabric-image">
+                        <img
+                          src="img/product/fabric/one/Fine_img.png"
+                          alt="Fine"
+                        />
+                      </div>
+
+                      <div class="fabric-info">
+                        <div class="fabric-name">Fine</div>
+                        <div class="arrow-left" onclick="toggleInfo(this)">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- DETAIL PANEL -->
+                    <div class="fabric-detail">
+                      <div class="detail-image">
+                        <img
+                          src="img/product/fabric/one/Fine_img.png"
+                          alt="Fine"
+                        />
+                      </div>
+
+                      <div class="detail-table">
+                        <table>
+                          <tr>
+                            <th>GSM Range</th>
+                            <td>140 – 180 GSM</td>
+                          </tr>
+                          <tr>
+                            <th>Composition</th>
+                            <td>Cotton / Polyester</td>
+                          </tr>
+                          <tr>
+                            <th>End-Use</th>
+                            <td>T-Shirts, Base Layers</td>
+                          </tr>
+                          <tr>
+                            <th>Color Availability</th>
+                            <td>Stock & Custom Colors</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
                   </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
 
-              <div class="grid-item Fabric">
-                <div class="box20 p-relative fix">
-                  <img
-                    src="img/product/Fleece_1.png"
-                    alt="Fleece Fabric"
-                  />
-                  <div class="box-content">
-                    <h3 class="title"><a href="#">Fleece Fabric</a></h3>
+                  <div class="fabric-wrapper">
+                    <div class="fabric-card">
+                      <div class="fabric-image">
+                        <img
+                          src="img/product/fabric/one/Airtex_img.png"
+                          alt="Airtex"
+                        />
+                      </div>
+                      <div class="fabric-info">
+                        <div class="fabric-name">Airtex</div>
+                        <div class="arrow-left" onclick="toggleInfo(this)">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="fabric-detail">
+                      <div class="detail-image">
+                        <img
+                          src="img/product/fabric/one/Airtex_img.png"
+                          alt="Airtex"
+                        />
+                      </div>
+                      <div class="detail-table">
+                        <table>
+                          <tr>
+                            <th>GSM Range</th>
+                            <td>160 – 210 GSM</td>
+                          </tr>
+                          <tr>
+                            <th>Composition</th>
+                            <td>Cotton / Polyester</td>
+                          </tr>
+                          <tr>
+                            <th>End-Use</th>
+                            <td>Sportswear, Activewear</td>
+                          </tr>
+                          <tr>
+                            <th>Color Availability</th>
+                            <td>Dyed & Melange Options</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
                   </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
 
-              <div class="grid-item Fabric">
-                <div class="box20 p-relative fix">
-                  <img src="img/product/French_1.png" alt="French Terry" />
-                  <div class="box-content">
-                    <h3 class="title"><a href="#">French Terry</a></h3>
+                  <div class="fabric-wrapper">
+                    <div class="fabric-card">
+                      <div class="fabric-image">
+                        <img
+                          src="img/product/fabric/one/Plated Airtex_img.png"
+                          alt="Plated Airtex"
+                        />
+                      </div>
+                      <div class="fabric-info">
+                        <div class="fabric-name">Plated Airtex</div>
+                        <div class="arrow-left" onclick="toggleInfo(this)">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="fabric-detail">
+                      <div class="detail-image">
+                        <img
+                          src="img/product/fabric/one/Plated Airtex_img.png"
+                          alt="Plated Airtex"
+                        />
+                      </div>
+                      <div class="detail-table">
+                        <table>
+                          <tr>
+                            <th>GSM Range</th>
+                            <td>180 – 230 GSM</td>
+                          </tr>
+                          <tr>
+                            <th>Composition</th>
+                            <td>Cotton / Polyester / Lycra</td>
+                          </tr>
+                          <tr>
+                            <th>End-Use</th>
+                            <td>Athleisure, Casual Wear</td>
+                          </tr>
+                          <tr>
+                            <th>Color Availability</th>
+                            <td>Custom Dyed</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
                   </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
 
-              <div class="grid-item Fabric">
-                <div class="box20 p-relative fix">
-                  <img
-                    src="img/product/Knitted_1.png"
-                    alt="Knitted Fabric"
-                  />
-                  <div class="box-content">
-                    <h3 class="title"><a href="#">Knitted Fabric</a></h3>
+                  <div class="fabric-wrapper">
+                    <!-- FABRIC CARD -->
+                    <div class="fabric-card">
+                      <div class="fabric-image">
+                        <img
+                          src="img/product/fabric/one/Interlock Airtex_img.png"
+                          alt="Interlock Airtex"
+                        />
+                      </div>
+
+                      <div class="fabric-info">
+                        <div class="fabric-name">Interlock Airtex</div>
+                        <div class="arrow-left" onclick="toggleInfo(this)">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- INFO PANEL -->
+                    <div class="fabric-detail">
+                      <div class="detail-image">
+                        <img
+                          src="img/product/fabric/one/Interlock Airtex_img.png"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="detail-table">
+                        <table>
+                          <tr>
+                            <th>GSM Range</th>
+                            <td>160 – 220 GSM</td>
+                          </tr>
+                          <tr>
+                            <th>Composition</th>
+                            <td>Cotton / Polyester / Lycra blends</td>
+                          </tr>
+                          <tr>
+                            <th>End-Use</th>
+                            <td>T-shirts, Activewear, Casual tops</td>
+                          </tr>
+                          <tr>
+                            <th>Color Availability</th>
+                            <td>Custom dyed & stock colors</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
                   </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
 
-              <div class="grid-item Fabric">
-                <div class="box20 p-relative fix">
-                  <img
-                    src="img/product/Lycra-rib_1.png"
-                    alt="Lycra Rib Knitted Fabrics"
-                  />
-                  <div class="box-content">
-                    <h3 class="title">
-                      <a href="#">Lycra Rib Knitted Fabrics</a>
-                    </h3>
+                  <div class="fabric-wrapper">
+                    <div class="fabric-card">
+                      <div class="fabric-image">
+                        <img
+                          src="img/product/fabric/one/Lycra Loopknit_img.png"
+                          alt="Lycra Loopknit"
+                        />
+                      </div>
+                      <div class="fabric-info">
+                        <div class="fabric-name">Lycra Loopknit</div>
+                        <div class="arrow-left" onclick="toggleInfo(this)">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="fabric-detail">
+                      <div class="detail-image">
+                        <img
+                          src="img/product/fabric/one/Lycra Loopknit_img.png"
+                          alt="Lycra Loopknit"
+                        />
+                      </div>
+                      <div class="detail-table">
+                        <table>
+                          <tr>
+                            <th>GSM Range</th>
+                            <td>200 – 260 GSM</td>
+                          </tr>
+                          <tr>
+                            <th>Composition</th>
+                            <td>Cotton / Lycra</td>
+                          </tr>
+                          <tr>
+                            <th>End-Use</th>
+                            <td>Stretch Tops, Activewear</td>
+                          </tr>
+                          <tr>
+                            <th>Color Availability</th>
+                            <td>Reactive Dyed Colors</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
                   </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
                 </div>
-              </div>
+              </main>
 
-              <div class="grid-item Fabric">
-                <div class="box20 p-relative fix">
-                  <img
-                    src="img/product/INTERLOCK_1.png"
-                    alt="Interlock Fabric"
-                  />
-                  <div class="box-content">
-                    <h3 class="title"><a href="#">Interlock Fabric</a></h3>
+              <!-- Fabric Products 2 -->
+              <main id="fabricTwo" class="products">
+                <div class="section-title center-align">
+                  <h2>Rib & Trim Knits</h2>
+                  <span class="line5 mb-2">
+                    <img src="img/bg/circle_left.png" alt="circle_left"
+                  /></span>
+                  <p style="width: 100%">
+                    Rib knits are designed to provide elasticity, recovery, and
+                    structure, making them essential for garment finishing and
+                    trims.
+                  </p>
+                </div>
+                <div class="product-grid">
+                  <div class="product-card">
+                    <img src="baby1.jpg" alt="" />
                   </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="grid-item Fabric">
-                <div class="box20 p-relative fix">
-                  <img src="img/product/Fabric_1.png" alt="Other Fabric" />
-                  <div class="box-content">
-                    <h3 class="title"><a href="#">Fabric (Other)</a></h3>
+                  <div class="product-card">
+                    <img src="baby2.jpg" alt="" />
                   </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="grid-item Fabric">
-                <div class="box20 p-relative fix">
-                  <img
-                    src="img/product/T-Shirt_1.png"
-                    alt="T-Shirt Fabric"
-                  />
-                  <div class="box-content">
-                    <h3 class="title"><a href="#">T-Shirt Fabric</a></h3>
+                  <div class="product-card">
+                    <img src="baby3.jpg" alt="" />
                   </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="grid-item Fabric">
-                <div class="box20 p-relative fix">
-                  <img src="img/product/Ready For All Over Print Fabric_1.png" alt="AOP Fabric" />
-                  <div class="box-content">
-                    <h3 class="title">
-                      <a href="#">Ready For All Over Print (AOP)</a>
-                    </h3>
+                  <div class="product-card">
+                    <img src="baby4.jpg" alt="" />
                   </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
 
-              <div class="grid-item Fabric">
-                <div class="box20 p-relative fix">
-                  <img
-                    src="img/product/Polyester_1.png"
-                    alt="Polyester Fabric"
-                  />
-                  <div class="box-content">
-                    <h3 class="title"><a href="#">Polyester Fabric</a></h3>
+                  <div class="product-card">
+                    <img src="baby5.jpg" alt="" />
                   </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="grid-item Fabric">
-                <div class="box20 p-relative fix">
-                  <img
-                    src="img/product/Jersey Fabric_1.png"
-                    alt="Jersey Fabric"
-                  />
-                  <div class="box-content">
-                    <h3 class="title"><a href="#">Jersey Fabric</a></h3>
+                  <div class="product-card">
+                    <img src="baby6.jpg" alt="" />
                   </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
                 </div>
-              </div>
-
-              <div class="grid-item Fabric">
-                <div class="box20 p-relative fix">
-                  <img
-                    src="img/product/Single Jersey_1.png"
-                    alt="Single Jersey Fabric"
-                  />
-                  <div class="box-content">
-                    <h3 class="title"><a href="#">Single Jersey Fabric</a></h3>
+              </main>
+              <!-- Fabric Products 3 -->
+              <main id="fabricThree" class="products">
+                <div class="section-title center-align">
+                  <h2>Terry & Fleece Knits</h2>
+                  <span class="line5 mb-2">
+                    <img src="img/bg/circle_left.png" alt="circle_left"
+                  /></span>
+                  <p style="width: 100%">
+                    Terry and fleece knits deliver warmth and softness through
+                    looped or brushed constructions, making them ideal for
+                    colder climates and relaxed apparel.
+                  </p>
+                </div>
+                <div class="product-grid">
+                  <div class="product-card">
+                    <img src="baby1.jpg" alt="" />
                   </div>
-                  <ul class="icon">
-                    <li>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                    </li>
-                  </ul>
+                  <div class="product-card">
+                    <img src="baby2.jpg" alt="" />
+                  </div>
+                  <div class="product-card">
+                    <img src="baby3.jpg" alt="" />
+                  </div>
                 </div>
-              </div>
-
+              </main>
+              <!-- Fabric Products 4 -->
+              <main id="fabricFour" class="products">
+                <div class="section-title center-align">
+                  <h2>Textured / Waffle Knits</h2>
+                  <span class="line5 mb-2">
+                    <img src="img/bg/circle_left.png" alt="circle_left"
+                  /></span>
+                  <p style="width: 100%">
+                    Waffle knits feature textured surfaces that improve airflow
+                    and moisture management while adding visual depth.
+                  </p>
+                </div>
+                <div class="product-grid">
+                  <div class="product-card">
+                    <img src="baby1.jpg" alt="" />
+                  </div>
+                  <div class="product-card">
+                    <img src="baby2.jpg" alt="" />
+                  </div>
+                  <div class="product-card">
+                    <img src="baby3.jpg" alt="" />
+                  </div>
+                  <div class="product-card">
+                    <img src="baby4.jpg" alt="" />
+                  </div>
+                </div>
+              </main>
+              <!-- Fabric Products 5 -->
+              <main id="fabricFive" class="products">
+                <div class="section-title center-align">
+                  <h2>Structured Double Knits</h2>
+                  <span class="line5 mb-2">
+                    <img src="img/bg/circle_left.png" alt="circle_left"
+                  /></span>
+                  <p style="width: 100%">
+                    Structured double knits provide stability, thickness, and a
+                    smooth finish on both sides, offering a refined look and
+                    feel.
+                  </p>
+                </div>
+                <div class="product-grid">
+                  <div class="product-card">
+                    <img src="baby1.jpg" alt="" />
+                  </div>
+                </div>
+              </main>
             </div>
           </div>
         </div>
       </section>
       <!-- gallery-area-end -->
+
+      <section
+        class="fabric-cta"
+        style="
+          background: #f8f8f8;
+          padding: 40px 20px;
+          text-align: center;
+          border-top: 1px solid #e0e0e0;
+        "
+      >
+        <h2 style="font-size: 28px; margin-bottom: 15px; color: #333">
+          Looking for the Perfect Fabric for Your Next Collection?
+        </h2>
+        <p style="font-size: 16px; color: #555; margin-bottom: 25px">
+          Get in touch with our team for
+          <strong>samples, detailed specifications, and bulk pricing</strong>.
+        </p>
+        <a
+          href="contact.html"
+          style="
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #ff6a00;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: background 0.3s;
+          "
+        >
+          Contact Us
+        </a>
+      </section>
     </main>
     <!-- main-area-end -->
     <!-- footer -->
@@ -435,9 +609,12 @@
                   <img src="img/logo/as_logo.png" alt="img" />
                 </div>
                 <p>
-                  AS Textiles is a Tiruppur-based manufacturer specializing in
-                  recycled knitted fabrics, delivering consistent quality,
-                  sustainable solutions, and timely dispatch since 2005.
+                  We are fabric manufacturer specializing in recycled knitted
+                  fabrics, delivering consistent quality, sustainable solutions,
+                  and timely dispatch since 2005. <br />
+                  With a strong focus on quality, innovation, and responsible
+                  manufacturing, we support brands and exporters with reliable
+                  fabric solutions.
                 </p>
                 <p style="font-style: italic">Stay Connected</p>
                 <div class="footer-social">
@@ -458,66 +635,83 @@
                     ><i class="fab fa-linkedin"></i
                   ></a>
                 </div>
+                <!-- <div class="f-contact">
+                  <ul>
+                    <li>
+                      <i class="icon fal fa-phone"></i>
+                      <span>1800-121-3637<br />+91-7052-101-786</span>
+                    </li>
+                    <li>
+                      <i class="icon fal fa-envelope"></i>
+                      <span>
+                        <a href="mailto:info@example.com">info@example.com</a>
+                        <br />
+                        <a href="mailto:help@example.com">help@example.com</a>
+                      </span>
+                    </li>
+                    <li>
+                      <i class="icon fal fa-map-marker-check"></i>
+                      <span
+                        >1247/Plot No. 39, 15th Phase,<br />
+                        LHB Colony, Kanpur</span
+                      >
+                    </li>
+                  </ul>
+                </div> -->
               </div>
             </div>
             <div class="col-xl-2 col-lg-2 col-sm-6">
               <div class="footer-widget mb-10">
                 <div class="f-widget-title">
-                  <h2>Our Links</h2>
+                  <h2>Quick Links</h2>
                 </div>
-                <div class="footer-link">
-                  <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html"> About Us</a></li>
-                    <li><a href="products.html"> Products </a></li>
-                    <li><a href="contactus.html"> Contact Us</a></li>
-                  </ul>
-                </div>
+                <div id="footerLink" class="footer-link"></div>
               </div>
             </div>
             <div class="col-xl-3 col-lg-3 col-sm-6">
               <div class="footer-widget mb-10">
                 <div class="f-widget-title">
-                  <h2>Our Products</h2>
+                  <h2>Products Served</h2>
                 </div>
-                <div class="footer-link">
-                  <ul>
-                    <li><a>Recycled Yarn Products</a></li>
-                    <li><a>Pique Fabrics</a></li>
-                    <li><a>Single Jersey Knitted Fabrics</a></li>
-                    <li><a>Fleece Fabrics</a></li>
-                    <li><a>French Terry Fabrics</a></li>
-                    <li><a>Lycra Rib and Interlock Fabrics</a></li>
-                    <li><a>Other Specialty Knitted Fabrics</a></li>
-                  </ul>
-                </div>
+                <div id="footerProducts" class="footer-link"></div>
               </div>
             </div>
             <div class="col-xl-3 col-lg-3 col-sm-6">
               <div class="footer-widget mb-10">
                 <div class="f-widget-title">
-                  <h2>Contact Information</h2>
+                  <h2>Reach Us</h2>
                 </div>
                 <div class="f-contact">
                   <ul>
-                    <li>
-                      <i class="icon fa-solid fa-phone"></i>
-                      <span>+91 80489 73808</span>
-                    </li>
-                    <li>
-                      <i class="icon fa-solid fa-envelope"></i>
-                      <span>
-                        <a href="mailto: info@astextiles.co.in">
-                          info@astextiles.co.in</a
-                        >
-                      </span>
-                    </li>
                     <li style="display: block">
-                      <i class="icon fa-solid fa-location-dot"></i>
-                      <span
-                        >5, Kongu Nagar 4th Street, Kongu Main Road Tiruppur -
-                        641607, Tamil Nadu, India.
-                      </span>
+                      <div>
+                        <i class="icon fa-solid fa-location-dot"></i>
+                        <span style="width: 100%"
+                          >5, Kongu Nagar 4th Street, Kongu Main Road Tiruppur -
+                          <span
+                            class="add-text"
+                            style="visibility: hidden; display: unset"
+                            >aqswdfy</span
+                          >
+                          641607, Tamil Nadu, India.
+                        </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <i class="icon fa-solid fa-envelope"></i>
+                        <span style="white-space: nowrap">
+                          <a href="mailto: info@astextiles.co.in">
+                            info@astextiles.co.in</a
+                          >
+                        </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <i class="icon fa-solid fa-phone"></i>
+                        <span style="white-space: nowrap">+91 80489 73808</span>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -531,6 +725,7 @@
           <div class="row align-items-center">
             <div class="col-lg-12 d-flex justify-content-center">
               © 2025 AS Textiles. All Rights Reserved.
+              <!-- <a href="https://tetrosoft.co.in/" target="_blank">  </a> -->
             </div>
           </div>
         </div>

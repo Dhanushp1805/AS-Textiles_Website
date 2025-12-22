@@ -54,7 +54,9 @@
                       <li class="has-sub">
                         <a href="index.html">Home</a>
                       </li>
-                      <li class="has-sub"><a href="aboutus.html">About Us</a></li>
+                      <li class="has-sub">
+                        <a href="aboutus.html">About Us</a>
+                      </li>
                       <li class="has-sub">
                         <a href="products.html">Products</a>
                       </li>
@@ -203,14 +205,23 @@
       <!-- contact-area -->
       <section
         id="contact"
-        class="contact-area after-none contact-bg pt-60 pb-60 p-relative fix"
+        class="contact-area after-none contact-bg pt-40 pb-60 p-relative fix"
       >
         <div class="container">
-          <p class="text-center" style="font-size: 18px">
-            We’d love to hear from you. Whether you’re looking for recycled
-            knitted fabric solutions, have a product inquiry, or want to discuss
-            a business opportunity, our team is here to help.
-          </p>
+          <div class="section-title text-center mb-50">
+            <h2 style="font-size: 28px">
+              Let’s Create Sustainable Fabrics Together
+            </h2>
+            <div class="line2">
+              <img src="img/bg/circle_left.png" alt="circle_right" />
+            </div>
+            <p style="width: 100%; font-size: 18px">
+              Get in touch with AS Textiles for recycled fabric enquiries,
+              samples, pricing, or production support and guidance. Our team is
+              always ready to support your business needs.
+            </p>
+          </div>
+
           <div class="row">
             <div class="col-lg-5">
               <div
@@ -218,21 +229,21 @@
                 style="background-image: url(img/testimonial/test-bg.png)"
               >
                 <div
-                  class="single-cta pb-30 mb-30 wow fadeInUp animated"
+                  class="single-cta pb-10 mb-20 wow fadeInUp animated"
                   data-animation="fadeInDown animated"
                   data-delay=".2s"
                 >
                   <div class="f-cta-icon">
                     <i class="far fa-map"></i>
                   </div>
-                  <h5>Office Address</h5>
+                  <h5>Address</h5>
                   <p>
                     5, Kongu Nagar 4th Street, Kongu Main Road Tiruppur -
                     641607, Tamil Nadu, India.
                   </p>
                 </div>
                 <div
-                  class="single-cta pb-30 mb-30 wow fadeInUp animated"
+                  class="single-cta pb-10 mb-20 wow fadeInUp animated"
                   data-animation="fadeInDown animated"
                   data-delay=".2s"
                 >
@@ -243,111 +254,169 @@
                   <p>+91 80489 73808</p>
                 </div>
                 <div
-                  class="single-cta pb-30 mb-30 wow fadeInUp animated"
+                  class="single-cta pb-10 mb-20 wow fadeInUp animated"
                   data-animation="fadeInDown animated"
                   data-delay=".2s"
                 >
                   <div class="f-cta-icon">
                     <i class="far fa-envelope-open"></i>
                   </div>
-                  <h5>Message Us</h5>
+                  <h5>Email</h5>
                   <p>
-                   We are always here to support you. Email us at :
+                    We are always here to support you. Email us at :
                     <a>info@astextiles.co.in</a>
                   </p>
+                </div>
+
+                <div
+                  class="single-cta pb-10 mb-20 wow fadeInUp animated"
+                  data-animation="fadeInDown animated"
+                  data-delay=".2s"
+                >
+                  <div class="f-cta-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                  </div>
+                  <h5>Social Media</h5>
+                  <div class="footer-social text-left">
+                    <a
+                      class="ml-0"
+                      href="https://www.facebook.com/sharer.php?u=https://www.astextiles.co.in/"
+                      target="_blank"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a
+                      href="https://twitter.com/share?url=https://www.astextiles.co.in/&text=AS%20Textiles"
+                      target="_blank"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a
+                      href="https://www.linkedin.com/cws/share?url=https://www.astextiles.co.in/"
+                      target="_blank"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-7">
               <div class="contact-bg02 wow fadeInLeft animated">
                 <div class="section-title center-align">
-                  <h2>Get A Quote</h2>
-                  <span class="line5">
+                  <h2>Get in Touch</h2>
+                  <span class="line5 mb-2">
                     <img src="img/bg/circle_left.png" alt="circle_left"
                   /></span>
+                  <p style="width: 100%">
+                    Send Us Your Fabric Requirement. Fill in the details below
+                    and our team will get back to you with the best solution.
+                  </p>
                 </div>
 
-                <form
-                  action="mail.php"
-                  method="post"
-                  class="contact-form mt-30"
-                >
+                <form id="contactForm" class="contact-form mt-20">
                   <div class="row">
-                    <div class="col-lg-6">
-                      <div class="contact-field p-relative c-name mb-30">
+                    <!-- First Name -->
+                    <div class="col-lg-6 col-6">
+                      <div class="contact-field p-relative mb-20">
                         <input
                           type="text"
-                          id="firstn"
-                          name="firstn"
+                          id="firstName"
+                          name="firstName"
                           placeholder="First Name"
-                          required
                         />
+                        <small id="errorFirstName" class="text-danger"></small>
                       </div>
                     </div>
-                    <div class="col-lg-6">
-                      <div class="contact-field p-relative c-email mb-20">
+
+                    <!-- Last Name -->
+                    <div class="col-lg-6 col-6">
+                      <div class="contact-field p-relative mb-20">
                         <input
                           type="text"
-                          id="lastn"
-                          name="lastn"
+                          id="lastName"
+                          name="lastName"
                           placeholder="Last Name"
-                          required
                         />
+                        <small id="errorLastName" class="text-danger"></small>
                       </div>
                     </div>
-                    <div class="col-lg-6">
-                      <div class="contact-field p-relative c-subject mb-30">
+
+                    <!-- Email -->
+                    <div class="col-lg-6 col-6">
+                      <div class="contact-field p-relative mb-20">
                         <input
                           type="text"
                           id="email"
                           name="email"
-                          placeholder="Eamil"
-                          required
+                          placeholder="Email"
                         />
+                        <small id="errorEmail" class="text-danger"></small>
                       </div>
                     </div>
-                    <div class="col-lg-6">
-                      <div class="contact-field p-relative c-subject mb-30">
+
+                    <!-- Phone -->
+                    <div class="col-lg-6 col-6">
+                      <div class="contact-field p-relative mb-20">
                         <input
                           type="text"
                           id="phone"
                           name="phone"
-                          placeholder="Phone No."
-                          required
+                          placeholder="Phone No"
                         />
+                        <small id="errorPhone" class="text-danger"></small>
                       </div>
                     </div>
+
+                    <!-- Subject -->
                     <div class="col-lg-12">
-                      <div class="contact-field p-relative c-subject mb-30">
+                      <div class="contact-field p-relative mb-20">
                         <input
                           type="text"
                           id="subject"
                           name="subject"
                           placeholder="Subject"
-                          required
                         />
                       </div>
                     </div>
 
+                    <!-- Message -->
                     <div class="col-lg-12">
-                      <div class="contact-field p-relative c-message mb-30">
+                      <div class="contact-field p-relative mb-20">
                         <textarea
-                          name="message"
                           id="message"
-                          cols="30"
-                          rows="10"
+                          name="message"
+                          rows="5"
                           placeholder="Write comments"
                         ></textarea>
+                        <small id="errorMessage" class="text-danger"></small>
                       </div>
-                      <div class="slider-btn">
-                        <button
-                          class="btn ss-btn active"
-                          data-animation="fadeInRight"
-                          data-delay=".8s"
-                        >
-                          Submint Now
-                        </button>
-                      </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="col-lg-3 d-flex justify-content-center justify-content-sm-start align-items-center gap-3">
+                      <button
+                        id="submitBtn"
+                        type="submit"
+                        class="btn ss-btn active"
+                      >
+                        <span
+                          id="spinner"
+                          class="spinner-border spinner-border-sm d-none"
+                        ></span>
+                        <span id="btnText">Submit Now</span>
+                      </button>
+                    </div>
+
+                    <!-- Messages -->
+                    <div class="col-lg-9 text-center text-sm-start">
+                      <p
+                        id="successMessage"
+                        class="text-success mt-3"
+                        style="display: none"
+                      ></p>
+                      <p
+                        id="formError"
+                        class="text-danger mt-3"
+                        style="display: none"
+                      ></p>
                     </div>
                   </div>
                 </form>
@@ -360,6 +429,17 @@
       <!-- map-area-end -->
       <div class="map fix">
         <div class="container-flud">
+          <div class="section-title text-center mb-50">
+            <h2>Find Us</h2>
+            <div class="line2">
+              <img src="img/bg/circle_left.png" alt="circle_right" />
+            </div>
+            <p style="width: 100%; font-size: 18px">
+              We are located in Tirupur – India’s leading knitwear manufacturing
+              hub, ensuring efficient logistics and quick response times for
+              bulk fabric orders.
+            </p>
+          </div>
           <div class="row">
             <div class="col-lg-12">
               <iframe
@@ -395,15 +475,31 @@
                   <img src="img/logo/as_logo.png" alt="img" />
                 </div>
                 <p>
-                  AS Textiles is a Tiruppur-based manufacturer specializing in
+                  We are fabric manufacturer specializing in
                   recycled knitted fabrics, delivering consistent quality,
-                  sustainable solutions, and timely dispatch since 2005.
+                  sustainable solutions, and timely dispatch since 2005. <br> With a
+                  strong focus on quality, innovation, and responsible
+                  manufacturing, we support brands and exporters with reliable
+                  fabric solutions.
                 </p>
-                <p style="font-style: italic;">Stay Connected</p>
+                <p style="font-style: italic">Stay Connected</p>
                 <div class="footer-social">
-                  <a class="ml-0" href="https://www.facebook.com/sharer.php?u=https://www.astextiles.co.in/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                  <a href="https://twitter.com/share?url=https://www.astextiles.co.in/&text=AS%20Textiles" target="_blank"><i class="fab fa-twitter"></i></a>
-                  <a href="https://www.linkedin.com/cws/share?url=https://www.astextiles.co.in/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a
+                    class="ml-0"
+                    href="https://www.facebook.com/sharer.php?u=https://www.astextiles.co.in/"
+                    target="_blank"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a
+                    href="https://twitter.com/share?url=https://www.astextiles.co.in/&text=AS%20Textiles"
+                    target="_blank"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/cws/share?url=https://www.astextiles.co.in/"
+                    target="_blank"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
                 </div>
                 <!-- <div class="f-contact">
                   <ul>
@@ -433,61 +529,50 @@
             <div class="col-xl-2 col-lg-2 col-sm-6">
               <div class="footer-widget mb-10">
                 <div class="f-widget-title">
-                  <h2>Our Links</h2>
+                  <h2>Quick Links</h2>
                 </div>
-                <div class="footer-link">
-                  <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html"> About Us</a></li>
-                    <li><a href="products.html"> Products </a></li>
-                    <li><a href="contactus.html"> Contact Us</a></li>
-                  </ul>
-                </div>
+                <div id="footerLink" class="footer-link"></div>
               </div>
             </div>
             <div class="col-xl-3 col-lg-3 col-sm-6">
               <div class="footer-widget mb-10">
                 <div class="f-widget-title">
-                  <h2>Our Products</h2>
+                  <h2>Products Served</h2>
                 </div>
-                <div class="footer-link">
-                  <ul>
-                    <li><a>Recycled Yarn Products</a></li>
-                    <li><a>Pique Fabrics</a></li>
-                    <li><a>Single Jersey Knitted Fabrics</a></li>
-                    <li><a>Fleece Fabrics</a></li>
-                    <li><a>French Terry Fabrics</a></li>
-                    <li><a>Lycra Rib and Interlock Fabrics</a></li>
-                    <li><a>Other Specialty Knitted Fabrics</a></li>
-                  </ul>
-                </div>
+                <div id="footerProducts" class="footer-link"></div>
               </div>
             </div>
             <div class="col-xl-3 col-lg-3 col-sm-6">
               <div class="footer-widget mb-10">
                 <div class="f-widget-title">
-                  <h2>Contact Information</h2>
+                  <h2>Reach Us</h2>
                 </div>
                 <div class="f-contact">
                   <ul>
-                    <li>
-                      <i class="icon fa-solid fa-phone"></i>
-                      <span>+91 80489 73808</span>
-                    </li>
-                    <li>
-                      <i class="icon fa-solid fa-envelope"></i>
-                      <span>
-                        <a href="mailto: info@astextiles.co.in">
-                          info@astextiles.co.in</a
-                        >
-                      </span>
-                    </li>
                     <li style="display: block">
-                      <i class="icon fa-solid fa-location-dot"></i>
-                      <span
-                        >5, Kongu Nagar 4th Street, Kongu Main Road Tiruppur -
-                        641607, Tamil Nadu, India.
-                      </span>
+                      <div>
+                        <i class="icon fa-solid fa-location-dot"></i>
+                        <span style="width: 100%"
+                          >5, Kongu Nagar 4th Street, Kongu Main Road Tiruppur - 
+                         <span class="add-text" style="visibility: hidden; display: unset;">aqswdfy</span> 641607, Tamil Nadu, India.
+                        </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <i class="icon fa-solid fa-envelope"></i>
+                        <span style="white-space: nowrap">
+                          <a href="mailto: info@astextiles.co.in">
+                            info@astextiles.co.in</a
+                          >
+                        </span>
+                      </div>
+                    </li>
+                     <li>
+                      <div>
+                        <i class="icon fa-solid fa-phone"></i>
+                        <span style="white-space: nowrap">+91 80489 73808</span>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -501,6 +586,7 @@
           <div class="row align-items-center">
             <div class="col-lg-12 d-flex justify-content-center">
               © 2025 AS Textiles. All Rights Reserved.
+              <!-- <a href="https://tetrosoft.co.in/" target="_blank">  </a> -->
             </div>
           </div>
         </div>
