@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
     footerLink.innerHTML = `
 	<a href="index.html">Home</a>
 	<a href="aboutus.html"> About Us</a>
-	<a href="products.html"> Our Fabrics </a>
+	<a class="Products"> Our Fabrics </a>
 	<a href="products.html"> Sustainability </a>
 	<a href="products.html"> Manufacturing Process </a>
 	<a href="products.html"> Quality & Certifications </a>
@@ -14,18 +14,18 @@ window.addEventListener("load", () => {
 	`;
 
     footerProducts.innerHTML = `
-	<a>Recycled Cotton Fabrics</a>
-	<a>Recycled Polyester Fabrics </a>
-	<a>Blended Recycled Fabrics</a>
-	<a>Knitted Fabrics</a>
-	<a>Customized Fabric Development</a>
+	<a class="activeLocalStorage">Lightweight Knits</a>
+	<a class="activeLocalStorage">Rib & Trim Knits</a>
+	<a class="activeLocalStorage">Terry & Fleece Knits</a>
+	<a class="activeLocalStorage">Textured / Waffle Knits</a>
+	<a class="activeLocalStorage">Structured Double Knits</a>
 	`;
   } else if (window.innerWidth >= 576) {
     footerLink.innerHTML = `
 	  <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="aboutus.html"> About Us</a></li>
-        <li><a href="products.html"> Our Fabrics </a></li>
+        <li><a class="Products"> Our Fabrics </a></li>
         <li><a href="products.html"> Sustainability </a></li>
         <li><a href="products.html"> Manufacturing Process </a></li>
         <li>
@@ -38,11 +38,11 @@ window.addEventListener("load", () => {
 
     footerProducts.innerHTML = `
 	 <ul>
-       <li><a>Recycled Cotton Fabrics</a></li>
-       <li><a>Recycled Polyester Fabrics </a></li>
-       <li><a>Blended Recycled Fabrics</a></li>
-       <li><a>Knitted Fabrics</a></li>
-       <li><a>Customized Fabric Development</a></li>
+       <li><a class="activeLocalStorage">Lightweight Knits</a></li>
+       <li><a class="activeLocalStorage">Rib & Trim Knits</a></li>
+       <li><a class="activeLocalStorage">Terry & Fleece Knits</a></li>
+       <li><a class="activeLocalStorage">Textured / Waffle Knits</a></li>
+       <li><a class="activeLocalStorage">Structured Double Knits</a></li>
      </ul>
 	 `;
   }
@@ -690,24 +690,80 @@ window.addEventListener("load", () => {
   });
 })(jQuery);
 
-  function toggleInfo(el) {
-    const wrapper = el.closest(".fabric-wrapper");
-    const card = wrapper.querySelector(".fabric-card");
-    const panel = wrapper.querySelector(".fabric-detail");
-    const productGrid = wrapper.querySelector(".product-grid");
+$(document).ready(function () {
+  // localStorage.removeItem();
 
-    // Close other open panels
-    document.querySelectorAll(".fabric-wrapper").forEach((w) => {
-      w.querySelector(".fabric-card").style.display = "block";
-      w.querySelector(".fabric-detail").style.display = "none";
-    });
+  $(document).on("click", "#footerProducts .activeLocalStorage", function () {
+    var text = $(this).text().trim();
+    localStorage.setItem("linkText", text);
+    window.location.href = "/products.html";
+    // $("#fabricBtn").trigger();
+  });
 
-    // Toggle current
-    if (panel.style.display === "flex") {
-      panel.style.display = "none";
-      card.style.display = "block";
+  var savedText = localStorage.getItem("linkText");
+  var filename = window.location.pathname;
+
+  //  //
+  if (filename === "/products.html" && savedText !== null) {
+    $("#fabricBtn").trigger("click");
+    if (savedText === "Lightweight Knits") {
+      $("#lightweightBtn").trigger("click");
+      // $(".category-list .li").removeClass("active");
+      $("#lightweightBtn").addClass("active");
+      $("html, body").animate({ scrollTop: 550 }, 100);
+    } else if (savedText === "Rib & Trim Knits") {
+      $("#ribBtn").trigger("click");
+      // $(".category-list .li").removeClass("active");
+      $("#ribBtn").addClass("active");
+      $("html, body").animate({ scrollTop: 550 }, 100);
+    } else if (savedText === "Terry & Fleece Knits") {
+      $("#terryBtn").trigger("click");
+      // $(".category-list .li").removeClass("active");
+      $("#terryBtn").addClass("active");
+      $("html, body").animate({ scrollTop: 550 }, 100);
+    } else if (savedText === "Textured / Waffle Knits") {
+      $("#texturedBtn").trigger("click");
+      // $(".category-list .li").removeClass("active");
+      $("#texturedBtn").addClass("active");
+      $("html, body").animate({ scrollTop: 550 }, 100);
+    } else if (savedText === "Structured Double Knits") {
+      $("#structuredBtn").trigger("click");
+      // $(".category-list .li").removeClass("active");
+      $("#structuredBtn").addClass("active");
+      $("html, body").animate({ scrollTop: 550 }, 100);
+    }
+    // $("html, body").animate({ scrollTop: 550 }, 100);
+  }
+
+  $(document).on("click", ".Products", function () {
+    localStorage.removeItem("linkText");
+    window.location.href = "/products.html";
+    $("html, body").animate({ scrollTop: 0 }, 100);
+  });
+});
+
+function toggleInfo(el) {
+  const wrapper = el.closest(".fabric-wrapper");
+  const card = wrapper.querySelector(".fabric-card");
+  const panel = wrapper.querySelector(".fabric-detail");
+
+  const isOpen =
+    panel.style.display === "flex" || panel.style.display === "grid";
+
+  // Close all
+  document.querySelectorAll(".fabric-wrapper").forEach((w) => {
+    w.querySelector(".fabric-card").style.display = "block";
+    w.querySelector(".fabric-detail").style.display = "none";
+  });
+
+  // Open selected
+  if (!isOpen) {
+    card.style.display = "none";
+
+    if (window.innerWidth <= 576) {
+      panel.style.display = "grid"; // 📱 mobile
     } else {
-      card.style.display = "none";
-      panel.style.display = "flex";
+      panel.style.display = "flex"; // 💻 tablet & desktop
     }
   }
+}
